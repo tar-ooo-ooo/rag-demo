@@ -1,10 +1,7 @@
 from typing import Optional
 
+from app.config import FAKE_USERS
+
 
 def get_user_from_db(user_id: int) -> Optional[dict]:
-    fake_bd = {
-        1: {"id": 1, "name": "Taro"},
-        2: {"id": 2, "name": "Yoko"},
-    }
-
-    return fake_bd.get(user_id)
+    return FAKE_USERS.get(user_id)
