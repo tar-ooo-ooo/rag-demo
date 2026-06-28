@@ -1,4 +1,4 @@
-from app.functions.api_get_user import api_get_user
+from app.functions.user.api_get_user import api_get_user
 from fastapi import APIRouter
 
 user_router = APIRouter(prefix="/user", tags=["user"])

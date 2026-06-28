@@ -1,10 +1,11 @@
 from app.config import APP_TITLE, HEALTH_STATUS, ROOT_MESSAGE
-from app.routers import user_router
+from app.routers import embedding_router, user_router
 from fastapi import FastAPI
 
 app = FastAPI(title=APP_TITLE)
 
 app.include_router(user_router)
+app.include_router(embedding_router)
 
 
 @app.get("/")
